@@ -26,6 +26,33 @@
 .button3 {background-color: #f44336;} /* Red */ 
 .button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
 .button5 {background-color: #555555;} /* Black */
+  .alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+.alert.success {background-color: #04AA6D;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
 </style>
 
 </head>
@@ -36,6 +63,10 @@
   <h3>Info!</h3>
   <p>সম্পূর্ণ নিয়ম পড়ার পর নিচে পরীক্ষার লিংক পাওয়া যাবে</p>
 </div> -->
+  <div class="alert info">
+  <span class="closebtn">&times;</span>  
+  <strong>Info!</strong> সম্পূর্ণ নিয়ম পড়ার পর নিচে পরীক্ষার লিংক পাওয়া যাবে
+</div>
 <center><h1 style="font-size: 40px;">হিগজিনো জীব বিজ্ঞান উৎসব ২০২১ - জাতীয় পর্যায়</h1>
 </center>
 <!-- Content -->
@@ -80,7 +111,18 @@
 <center><button class="button button5" onclick="location.href='./link';" style="font-size:50px;">পরীক্ষা দিতে এই লিংক এ চাপুন </button></center><br><br><br>
 <center><i style="padding-bottom:50px;">© 2021 <a href="http://github.com/mahirbd">Mahir Shahriar</a> | Higgsino Science Society</center>
 <!-- partial -->
-  
+  <script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+</script>
 </body>
 </html>
 
