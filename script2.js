@@ -1,6 +1,6 @@
 
 // Set the date we're counting down to
-var countDownDate = new Date("Aug 24, 2021 14:55:00").getTime();
+var countDownDate = new Date("Aug 24, 2021 17:30:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -23,7 +23,8 @@ var x = setInterval(function() {
     
   // If the count down is over, write some text 
   if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = window.location.replace("./rules");
+    
+    document.getElementById("demo").innerHTML = days + "দিন " + hours + "ঘন্টা "
+  + minutes + "মিনিট " + seconds + "সেকেন্ড আগে পরীক্ষা শেষ হয়ে গেছে।";
   }
 }, 1000);
