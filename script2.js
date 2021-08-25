@@ -24,7 +24,7 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     
-    document.getElementById("demo").innerHTML = days + "দিন " + hours + "ঘন্টা "
-  + minutes + "মিনিট " + seconds + "সেকেন্ড আগে পরীক্ষা শেষ হয়ে গেছে।";
+    document.getElementById("demo").innerHTML = -days-1 + "দিন " + -hours + "ঘন্টা "
+  + -minutes + "মিনিট " + -seconds + "সেকেন্ড আগে পরীক্ষা শেষ হয়ে গেছে।";
   }
 }, 1000);
